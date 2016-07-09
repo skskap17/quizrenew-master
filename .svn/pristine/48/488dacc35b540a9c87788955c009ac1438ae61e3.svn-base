@@ -1,0 +1,66 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html >
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ログイン画面</title>
+</head>
+
+		<link rel = "stylesheet"href="submit.css"type="text/css">
+		<link rel = "stylesheet"href="ugoki.css"type="text/css">
+
+		<style>
+
+	footer{
+	background-color: #3399FF;   /* 背景色(黒) */
+	width:100%;               /* 横の幅を100% */
+	height: 30px;            /* 縦の幅を120px */
+	position: absolute;       /* 絶対位置指定することを定義 */
+	bottom: 0px;              /* 絶対位置指定(左0px,下0px) */
+	padding: 10px 0;          /* 上下に余白を取る */
+
+	filter:alpha(opacity=60);
+    -moz-opacity: 0.75;
+    opacity: 0.75;
+
+	}
+
+	#form{
+	margin-bottom:20px;
+	}
+
+	.logform{
+
+	marigin-top:20px;
+
+	}
+
+</style>
+
+<body>
+
+	<!-- <div class="type-mask">
+		<h2>キャスレークイズ</h2>
+	</div> -->
+
+<div id="form" class="logform">
+
+    <p class="form-title">キャスレークイズへようこそ</p>
+
+    <form action= "LoginSV" method="post">
+        <p>ユーザーID</p>
+        <p class="id"><input type="userid" name="name" maxlength='20' required/></p>
+        <p>パスワード</p>
+        <p class="pass"><input type="password" name="pass" maxlength='10' required/></p>
+        <p class="submit"><input type="submit" value="ログイン" name="ACTION" /></p>
+    </form>
+    <a href = "SinkiTouroku.jsp"><p class="submit"><input type="submit" value="新規登録" name="ACTION"/></a></p>
+</div>
+
+	<footer>
+	<p>Copyright 2016 しすざんまい〠</p>
+	</footer>
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel = "stylesheet"href="submit.css"type="text/css">
+	<link rel = "stylesheet"href="hidden.css"type="text/css">
+
+<meta charset="UTF-8">
+<title>情報変更画面</title>
+
+<style>
+
+
+
+
+.newpass{
+
+text-align:center;
+margin-bottom:10px;
+color:#484848;
+font-weight:bold;
+
+}
+
+.chenge{
+
+padding-top:60px;
+
+}
+
+
+
+
+</style>
+
+
+</head>
+<body>
+
+		<div id="form">
+    	<p class="form-title">パスワード変更します</p>    </div>
+
+
+<div class="chenge">
+<form action= "JohohenkoSV" method="post">
+
+<p class="hidden">
+
+<p class="newpass">新しいパスワード</p><input type = "password" name="pass" maxlength='10' required placeholder="新しいパスワードを
+10文字以内で入力して下さい"/>
+
+
+
+
+<p class="submit"> <input type ="submit" value = "変更">
+</form>
+</div>
+<a href = "Top.jsp">
+<p class="submit"> <input type = "submit" value = "Top画面へ"> </p>
+</a>
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+
+		<link rel = "stylesheet"href="submit.css"type="text/css">
+	<link rel = "stylesheet"href="hidden.css"type="text/css">
+
+<meta charset="UTF-8">
+<title>情報変更結果</title>
+</head>
+<body>
+
+<h1><center><br><br><br>
+<p>
+<p class="kanryo"><%=request.getAttribute("msg") %>
+</p>
+</center></h1>
+
+
+
+
+<a href = "Top.jsp">
+<p class="submit"><input type = "submit" value = "Top画面へ"></a></p>
+
+
+
+<style>
+
+
+.kanryo  {
+width: 600px;
+margin-bottom: 1em;
+background: url(heading_back3_left.gif) no-repeat left top;
+border-bottom: 2px #ff6699 solid;
+}
+
+
+.kanryo  {
+margin: 0;
+padding: 10px 10px 5px;
+background: url(heading_back3_right.gif) no-repeat right top;
+border-bottom: 2px #ff6699 solid;
+font-size: 100%;
+line-height: 100%;
+}
+
+</style>
+
+</body>
+</html>

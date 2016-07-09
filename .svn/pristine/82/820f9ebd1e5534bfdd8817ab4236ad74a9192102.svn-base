@@ -1,0 +1,178 @@
+@CHARSET "UTF-8";
+
+
+
+body,p,form,input{margin: 0}
+#form{
+  width: 400px;
+  margin: 30px auto;
+  padding: 20px;
+  border: 1px solid #555;
+  }
+
+form p{
+    font-size: 14px;
+    }
+
+.form-title{
+  text-align: center;
+  }
+
+.mail,.pass{
+  margin-bottom: 20px;
+  }
+
+input[type="userid"],
+input[type="password"] {
+  width: 300px;
+  padding: 4px;
+  font-size: 14px;
+  }
+
+submit{
+  text-align: right;
+  }
+
+/* font */
+#form p{
+  color: #999;
+  font-weight: bold;
+  }
+
+#form .form-title{
+  font-family: Arial;
+  font-size: 30px;
+  color: #6699FF;
+  }
+
+/* skin */
+
+#form{
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  -webkit-box-shadow: 0px 1px 10px #488a9e;
+  -moz-box-shadow: 0px 1px 10px #488a9e;
+  /* box-shadow: 0px 1px 10px #488a9e; */
+  border: solid #6699FF 2px;
+  background: #FFF;
+  /* filter:alpha(opacity=90);
+    -moz-opacity: 0.8;
+    opacity: 0.95; */
+  }
+
+
+
+
+#form .form-title{
+  padding-bottom: 6px;
+
+  margin-bottom: 20px;
+  }
+
+/* フォームデザイン */
+
+
+input[type="submit"] {
+	background: #6666FF;
+	width: 150px;
+	padding: 9px;
+	letter-spacing: 1px;
+	border: none;
+	color: #EFDDA8;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	/* font-weight:bold; */
+	margin-top:10px;
+	margin-bottom:10px;
+	width:200px;
+}
+
+
+
+
+
+/* .submit input{
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 16px;
+  padding-top: 10px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  text-decoration: none;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 8px 6px #e3e3e3;
+  -moz-box-shadow: 0px 8px 6px #e3e3e3;
+  box-shadow: 0px 8px 6px #e3e3e3;
+  border: solid #f5fdff 4px;
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#61c7e0), to(#418da8));
+  background: -moz-linear-gradient(top, #61c7e0, #418da8);
+
+
+  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), 0px 1px 2px rgba(0, 0, 0, 0.2);
+-webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), 0px 1px 2px rgba(0, 0, 0, 0.2);
+box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), 0px 1px 2px rgba(0, 0, 0, 0.2);
+-webkit-border-radius: 3px;
+-moz-border-radius: 3px;
+border-radius: 3px;
+
+  }
+.submit input:hover{
+  background: #37a4bf;
+ } */
+
+/*  .submit input{
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 16px;
+  padding-top: 10px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  text-decoration: none;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 8px 6px #e3e3e3;
+  -moz-box-shadow: 0px 8px 6px #e3e3e3;
+  box-shadow: 0px 8px 6px #e3e3e3;
+  border: solid #f5fdff 4px;
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#61c7e0), to(#418da8));
+  background: -moz-linear-gradient(top, #61c7e0, #418da8);
+  }
+.submit input:hover{
+  background: #37a4bf;
+ } */
+
+
+body {
+  background-image:url(cyas.png);
+  text-align: center;
+}
+
+.quiztable{
+	 width:70%;
+    height:120%%;
+    background:#99CCFF;
+    margin:40px auto;
+    margin-top:20px;
+    margin-bottom:20px;
+
+    filter:alpha(opacity=50);
+    -moz-opacity: 0.9;
+    opacity: 0.9;
+
+
+}
+
+
+
+
+
+
+
+

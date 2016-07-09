@@ -1,0 +1,60 @@
+@CHARSET "UTF-8";
+
+
+
+
+
+table.ranking {
+
+    border-collapse: separate;
+    border-spacing: 3px;
+    text-align: center;
+    line-height: 1.5;
+
+}
+
+div#tab{
+
+	text-align:center;
+	margin = 0 auto;
+	filter:alpha(opacity=20);
+    -moz-opacity: 0.75;
+    opacity: 0.75;
+
+
+}
+
+
+table.ranking th {
+
+    width: 155px;
+    padding: 10px;
+    font-weight: bold;
+    vertical-align: top;
+    color: #fff;
+    background: #666;
+
+}
+
+table {
+background: Transparent;
+margin-left: auto;
+margin-right: auto
+
+}
+
+
+table.ranking td {
+
+    width: 155px;
+    padding: 30px 10px;
+    vertical-align: top;
+    background: #eee;
+
+}
+table.ranking th.col01 {background: #660033;}
+table.ranking td.col01 {background: #FFCCCC;}
+table.ranking th.col02 {background: #3366CC;}
+table.ranking td.col02 {background: #e2eeff;}
+table.ranking th.col03 {background: #009900;}
+table.ranking td.col03 {background: #CCFFCC;}

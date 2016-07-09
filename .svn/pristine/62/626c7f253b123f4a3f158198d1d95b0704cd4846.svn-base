@@ -1,0 +1,23 @@
+@CHARSET "UTF-8";
+
+.type-stripe {
+
+  height: 10px;
+
+  background: linear-gradient(-45deg, #3498DB 25%, #fff 25%, #fff 50%, #3498DB 50%, #3498DB 75%, #fff 75%, #fff);
+
+  -webkit-animation: stripeBg 10s linear infinite;
+
+ background-size: 20px 20px;
+
+  border: 1px solid #3498DB;
+
+  }
+
+@-webkit-keyframes stripeBg {
+
+ 0% {background-position: 0 0;}
+
+100% {background-position: 100% 0;}
+
+}

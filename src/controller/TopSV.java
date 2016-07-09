@@ -1,0 +1,68 @@
+package controller;
+
+import java.io.IOException;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+/**
+ * Servlet implementation class TopSV
+ */
+@WebServlet("/TopSV")
+public class TopSV extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public TopSV() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		System.out.println("TopSVのdoGetきたよ");
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		System.out.println("TopSVのdoPostきたよ");
+		request.setCharacterEncoding("UTF-8");
+		response.setCharacterEncoding("UTF-8");
+
+		//Topページからの遷移用SV
+
+		//遷移するページをリクエスト領域から取ってくる
+		String action = request.getParameter("ACTION");
+
+		String url = null;
+		if(action.equals("クイズ")){//遷移先で分岐
+			url="DoQuizSV";
+		} else if (action.equals("クイズ登録")){
+			url = "QuizTouroku.jsp";
+		} else if (action.equals("ランキング")){
+			url = "RankingSV";
+		} else if (action.equals("パスワード変更")){
+			url = "Johohennko.html";
+		} else {
+			HttpSession sn = request.getSession();//ログアウトなのでセッション削除
+			sn.invalidate();
+			url = "Logout.html";
+		}
+
+		RequestDispatcher rd = request.getRequestDispatcher(url);
+		rd.forward(request, response);
+
+	}
+
+}

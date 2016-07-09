@@ -1,0 +1,185 @@
+
+
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@page import="java.util.List" %>
+<%@page import="model.bean.UserBean" %>
+<%
+List<UserBean> ranking = (List<UserBean>)request.getAttribute("ranking");
+
+%>
+<!DOCTYPE html >
+<html>
+<head>
+
+		<link rel = "stylesheet"href="submit.css"type="text/css">
+		<link rel = "stylesheet"href="hidden.css"type="text/css">
+		<link rel = "stylesheet"href="table.css"type="text/css">
+
+
+		<style>
+
+		.mozimozi{
+
+		font-size:25px;
+		font-weight:bold;
+
+
+
+		}
+
+
+
+    	body {
+  		background-image:url(ebisu.jpg) ;
+  		background-repeat: no-repeat;
+  		background-size:2200px;
+ 		text-align: center;
+ 		position:relative;
+
+
+			}
+
+		div#table1{
+		text-align: center;
+
+		}
+
+		div#crown{
+		 position:relative;
+		 bottom:360px;
+         right: 180px;
+
+		}
+
+		div#topp h1{
+
+		color:#FFFFFF;
+        text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+        font-size: 50px;;
+}
+
+div#topp p{
+
+color:#FFFFFF;
+        text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+        font-size: 100%%;
+}
+
+}
+
+.clearText {
+	text-indent:100%;
+	white-space:nowrap;
+	overflow:hidden;
+}
+
+.submit3{
+
+margin-bottom:20px;
+
+
+}
+
+
+
+    	</style>
+
+
+<meta charset="UTF-8">
+<title>ランキング画面</title>
+</head>
+<body>
+
+<div id="topp">
+	<h1>ランキング表</h1>
+	<p>上位3名には素敵な景品があります。<br>
+    	皆さん頑張ってください！</p>
+</div>
+
+<div id="tab">
+    	<table class="ranking" id="table2">
+
+    <thead>
+    <tr>
+
+        <th scope="cols" class="col01">順位</th>
+        <th scope="cols" class="col02">ユーザー名</th>
+        <th scope="cols" class="col03">得点</th>
+
+    </tr>
+    </thead>
+    <tbody>
+<%
+int j = 0;
+for(int i = 0; i < ranking.size(); i++){
+	if (ranking.get(i).getId() == 1) {
+		continue;
+	}
+%>
+    <tr>
+    <%
+    if (j == 0){
+    %>
+    	<td class="col01"><img alt="" src="327650.png" height="80px"></td>
+        <td class="col02"><p class="mozimozi"><%=ranking.get(i).getName() %></p></td>
+        <td class="col03"><p class="mozimozi"><%=ranking.get(i).getScore()%></p></td>
+    <%
+    } else if (j == 1){
+    %>
+        <td class="col01"><img alt="" src="344605.png" height="70px"></td>
+        <td class="col02"><p class="mozimozi"><%=ranking.get(i).getName() %></p></td>
+        <td class="col03"><p class="mozimozi"><%=ranking.get(i).getScore()%></p></td>
+    <%
+    } else if (j == 2){
+    %>
+        <td class="col01"><img alt="" src="327591.png" height="70px"></td>
+        <td class="col02"><p class="mozimozi"><%=ranking.get(i).getName() %></p></td>
+        <td class="col03"><p class="mozimozi"><%=ranking.get(i).getScore()%></p></td>
+    <%
+    } else {
+    %>
+        <td class="col01"><p class="mozimozi"><%=j+1 %></td>
+        <td class="col02"><p class="mozimozi"><%=ranking.get(i).getName() %></p></td>
+        <td class="col03"><p class="mozimozi"><%=ranking.get(i).getScore()%></p></td>
+    <%
+    }
+    %>
+   	</tr>
+<%
+	j++;
+	if(j == 9){
+		break;
+	}
+}
+%>
+
+    </tbody>
+</table>
+</div>
+
+
+
+
+
+   <div class="clearText"> <p>
+<%for(int i = 0; i < 3; i++){
+	/* out.print((i+1) + "位" + ranking.get(i).getName() + "さん" + ranking.get(i).getScore() + "点\n"); */
+%></div>
+<br>
+
+<%
+}
+%>
+
+
+<p class="submit submit3"><a href="Top.jsp"><input type="submit" value="TOP画面へ"></a></p>
+
+
+
+
+
+
+
+</body>
+</html>

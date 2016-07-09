@@ -1,0 +1,190 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ page import ="model.bean.QuizBean"%>
+<%@ page import ="java.util.ArrayList" %>
+<%@ page import = "java.util.Collections" %>
+
+
+<%
+	ArrayList<QuizBean> qList =  (ArrayList) session.getAttribute("doquizList");
+%>
+<%
+
+%>
+
+<!DOCTYPE html>
+<html>
+<head>
+
+		<link rel = "stylesheet"href="submit.css"type="text/css">
+		<!-- jQuery -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+<script>
+//■page topボタン
+$(function(){
+var topBtn=$('#pageTop');
+topBtn.hide();
+
+//◇ボタンの表示設定
+$(window).scroll(function(){
+  if($(this).scrollTop()>80){
+    //---- 画面を80pxスクロールしたら、ボタンを表示する
+    topBtn.fadeIn();
+  }else{
+    //---- 画面が80pxより上なら、ボタンを表示しない
+    topBtn.fadeOut();
+  }
+});
+
+// ◇ボタンをクリックしたら、スクロールして上に戻る
+topBtn.click(function(){
+  $('body,html').animate({
+  scrollTop: 0},500);
+  return false;
+});
+
+});
+
+</script>
+
+<meta charset="UTF-8">
+<title>クイズ</title>
+
+<style>
+body{
+  background-image:url(hatena.png);
+ /*  text-align: center; */
+}
+
+.gan{
+
+ margin-top:40px;
+  margin-bottom:40px;
+
+}
+
+
+
+
+
+{
+.effect1{
+    -webkit-box-shadow: 0 10px 6px -6px #777;
+       -moz-box-shadow: 0 10px 6px -6px #777;
+            box-shadow: 0 10px 6px -6px #777;
+}
+
+}
+
+#pageTop a:hover {
+  text-decoration: none;
+  opacity: 0.7;
+}
+
+body{
+
+position:relative;
+
+}
+
+#pageTop{
+
+
+ text-align:center;
+ padding-right:10px;
+
+
+}
+
+
+#pageTop a {
+  display: block;
+  z-index: 999;
+  padding: 20px 20px 20px 20px;
+
+  width: 35px;
+  height: 35px;
+  background-color: #336699;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+  position:relative;
+  left:1200px;
+  bottom:100px;
+  font-size:24px;
+  font-weight:bold;
+
+}
+
+</style>
+
+
+
+
+</head>
+
+<body>
+
+
+<b>
+
+
+
+		<div id="form">
+    <p class="form-title">クイズスタート</p>
+    <h5>10点以上のスコアを獲得すればクイズを登録することができます。</h5></div>
+</div>
+ <!--    <div class="type-stripe"></div> -->
+
+
+
+<form action ="QuizResultSV" method="post">
+
+<% for (int i = 0; i < 20; i++) { %>
+	<%
+	ArrayList<String> choiseList = new ArrayList<String>();
+	choiseList.add(qList.get(i).getAnswer());
+	choiseList.add(qList.get(i).getChoices1());
+	choiseList.add(qList.get(i).getChoices2());
+	choiseList.add(qList.get(i).getChoices3());
+	%>
+	<%
+	Collections.shuffle(choiseList);
+	%>
+
+	<div class="quiztable sample effect1 box">
+	    	<h4>Q<%=i+1%> <%= qList.get(i).getQuiz() %></h4>
+
+	    <p>
+    	<input type="radio" name="ans<%=i %>" value="<%= choiseList.get(0) %>" checked id="radio01" />
+    	<label for="radio01" class="radio"><%= choiseList.get(0) %></label>
+
+    	<input type="radio" name="ans<%=i %>" value="<%= choiseList.get(1) %>" id="radio02"/>
+    	<label for="radio02" class="radio"><%= choiseList.get(1) %></label>
+
+    	<input type="radio" name="ans<%=i %>" value="<%= choiseList.get(2) %>" id="radio03" />
+    	<label for="radio03" class="radio">	<%= choiseList.get(2) %></label>
+
+    	<input type="radio" name="ans<%=i %>" value="<%= choiseList.get(3) %>" id="radio04" />
+    	<label for="radio04" class="radio">	<%= choiseList.get(3) %></label>
+		</p></b>
+
+	</div>
+
+<% } %>
+
+
+
+		<p class="submit quizsub gan"><input type="submit" value="送信">
+
+		<p id="pageTop"><a href="#">↑</a></p>
+
+
+
+
+
+</body>
+
+</html>

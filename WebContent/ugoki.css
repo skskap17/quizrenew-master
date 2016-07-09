@@ -1,0 +1,23 @@
+@CHARSET "UTF-8";
+
+.type-mask h2{
+
+  -webkit-animation: scrollmask 25s ease 2.5s infinite;
+
+  -webkit-background-clip: text;
+
+  background-image: url(hanabi.png);
+
+  color: transparent;
+
+  font-size: 100px;
+
+}
+
+@-webkit-keyframes scrollmask {
+
+  0% {background-position: 0 0;}
+
+  100% {background-position: 100% 0;}
+
+}
